@@ -1,0 +1,108 @@
+@import
+ url('https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css'),
+ url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css'),
+ url('./variables');
+
+@mixin link-color($opacity) {
+  color: rgba(255, 255, 255, $opacity) !important;
+}
+
+.navbar-toggler {
+  border: none;
+  .navbar-toggler-icon {
+    background: none !important;
+  }
+}
+
+nav {
+  position: fixed !important;
+  right: 0;
+  top: 0;
+  width: 80%;
+
+  .info {
+    & * {
+      cursor: pointer;
+      margin-inline: .75rem;
+    }
+    #profile-img::before {
+      content: '|';
+      display: inline;
+      
+      position: relative;
+      top: 5px;
+
+      color: rgba($secondary, .4);
+      font-size: 40px;
+    }
+    .badge {
+      position: relative;
+      margin: 0;
+      left: -2em;
+      top: -1em;
+    }
+    img {
+      height: auto;
+      width: 44px;
+    }
+  }
+}
+
+aside {
+  display: none;
+
+  position: fixed;
+
+  padding: 1em;
+  width: 20%;
+  height: 100%;
+  
+  background-color: $primary;
+  
+  header {
+    position: relative;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    color: rgb(255, 255, 255);
+   
+    i {
+      text-align: center;
+      font-size: 4rem;
+    }
+    h3 {
+      text-transform: uppercase;
+    }
+  }
+  .list-group {
+    a.list-group-item {
+      overflow: visible;
+      white-space: nowrap;
+      padding-block: 1rem;
+      font-size: larger;
+      @include link-color(.6);
+      text-decoration: none;
+      &:hover {
+        background-color: transparent;
+        font-weight: 600;
+        @include link-color(.7)
+      }
+      &.current {
+        font-weight: bold;
+        @include link-color(1);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    width: 100%;
+  }
+  #profile-img::before {
+    display: none !important;
+  }
+}
