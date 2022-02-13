@@ -2,6 +2,31 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
 @import url("./variables");
+html {
+  scroll-behavior: smooth;
+}
+
+a#goUp {
+  position: fixed;
+  right: 5vw;
+  bottom: 5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+  width: 50px;
+  font-size: 2em;
+  color: #fff;
+  background-color: #000;
+  opacity: .4;
+}
+
 .navbar-toggler {
   border: none;
 }
@@ -60,6 +85,10 @@ main {
   top: 6rem;
   width: 80%;
   margin-left: 16.7% !important;
+}
+
+main #goals {
+  scroll-margin-top: 100vh;
 }
 
 main button {

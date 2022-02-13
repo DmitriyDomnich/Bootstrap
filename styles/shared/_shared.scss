@@ -7,6 +7,26 @@
   color: rgba(255, 255, 255, $opacity) !important;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+a#goUp {
+  position: fixed;
+  right: 5vw;
+  bottom: 5vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  height: 50px;
+  width: 50px;
+
+  font-size: 2em;
+  color: #fff;
+  background-color: #000;
+  opacity: .4;
+}
 .navbar-toggler {
   border: none;
   .navbar-toggler-icon {
@@ -64,6 +84,9 @@ main {
   width: 80%;
   margin-left: 16.7% !important;
 
+  #goals {
+    scroll-margin-top: 100vh;
+  }
   button {
     font-size: 1.25em !important;
     font-weight: 700 !important;
