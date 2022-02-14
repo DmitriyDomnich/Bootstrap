@@ -57,8 +57,9 @@ nav {
       content: '|';
       display: inline;
       
-      position: relative;
-      top: 5px;
+      position: absolute;
+      top: -5px;
+      left: -2.5px;
       color: rgba($secondary, .4);
       font-size: 40px;
     }
@@ -75,62 +76,14 @@ nav {
     transform: translateX(50%);
   }
 }
+#top {
+  scroll-margin-top: 2000px;
+}
 
 main {
   position: relative;
-  left: 0;
   top: 6rem;
-
-  width: 80%;
   margin-left: 16.7% !important;
-
-  #goals {
-    scroll-margin-top: 100vh;
-  }
-  button {
-    font-size: 1.25em !important;
-    font-weight: 700 !important;
-  }
-  .goal {
-    i {
-      position: absolute;
-      font-size: 3em;
-      opacity: .15;
-      right: 4%;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-    h6 {
-      text-transform: uppercase;
-    }
-  }
-  p {
-    color: $secondary;
-    margin-bottom: 0;
-    &+input {
-      -webkit-appearance: none;
-      position: absolute;
-      right: 5%;
-      top: 50%;
-      transform: translateY(-50%);
-      
-      width:30px;
-      height:30px;
-
-      background:#fff;
-      &:checked {
-        background-color: $primary;
-
-        &::before {
-          content: "✓";
-          color: #fff;
-          
-          display: flex;
-          justify-content: center;
-        }
-      }
-    }
-  }
 }
 
 

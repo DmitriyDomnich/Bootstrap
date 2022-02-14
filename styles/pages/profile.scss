@@ -1,0 +1,22 @@
+@import '../shared/variables', '../shared/shared';
+
+main {
+  overflow-x: hidden;
+
+  .homework {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .progress {
+      width: 100%;
+      margin-bottom: .75rem;
+    }
+  }
+}
+@media (max-width: 1200px) and (min-width: 768px) {
+  .homework {
+    h6, span {
+      font-size: .75em;
+    }
+  }
+}

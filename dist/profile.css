@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
 @import url("./variables");
@@ -165,53 +164,28 @@ aside .list-group a.list-group-item.current {
   }
 }
 
-main button {
-  font-size: 1.25em !important;
-  font-weight: 700 !important;
+main {
+  overflow-x: hidden;
 }
 
-main .goal i {
-  position: absolute;
-  font-size: 3em;
-  opacity: .15;
-  right: 4%;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
-main .goal h6 {
-  text-transform: uppercase;
-}
-
-main p {
-  color: #6c757d;
-  margin-bottom: 0;
-}
-
-main p + input {
-  -webkit-appearance: none;
-  position: absolute;
-  right: 5%;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  width: 30px;
-  height: 30px;
-  background: #fff;
-}
-
-main p + input:checked {
-  background-color: #007bff;
-}
-
-main p + input:checked::before {
-  content: "✓";
-  color: #fff;
+main .homework {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .homework .progress {
+  width: 100%;
+  margin-bottom: .75rem;
+}
+
+@media (max-width: 1200px) and (min-width: 768px) {
+  .homework h6, .homework span {
+    font-size: .75em;
+  }
 }

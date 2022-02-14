@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="dist/goals.css">
-  <script src="./scripts/goals.index.js" defer></script>
+  <link rel="stylesheet" href="../dist/goals.css">
+  <script src="../scripts/goals.index.js" defer></script>
   <title>Goals</title>
 </head>
 
@@ -19,19 +19,19 @@
           <h3 class="mx-lg-3 font-weight-bold">Brand</h3>
         </header>
         <div class="list-group list-group-flush">
-          <a href="#1" class="list-group-item ml-n3 ml-lg-0 bg-transparent border-0 current">
+          <a href="#" class="list-group-item ml-n3 ml-lg-0 bg-transparent border-0 current">
             <i class="bi bi-calendar2"></i>
             Goals</a>
-          <a href="#2" class="list-group-item ml-n3 ml-lg-0 bg-transparent border-0">
+          <a href="./profile.html" class="list-group-item ml-n3 ml-lg-0 bg-transparent border-0">
             <i class="bi bi-person-fill"></i>
             Profile</a>
-          <a href="#3" class="list-group-item ml-n3 ml-lg-0 bg-transparent border-0">
+          <a href="./register.html" class="list-group-item ml-n3 ml-lg-0 bg-transparent border-0">
             <i class="bi bi-person-circle"></i>
             Register</a>
         </div>
       </aside>
 
-      <nav class="navbar shadow justify-content-stretch navbar-expand-md navbar-light bg-light col-md-10">
+      <nav class="navbar shadow navbar-expand-md navbar-light bg-light col-md-10">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon">
@@ -59,30 +59,30 @@
         <div class="col-xl-auto col-lg-3 col-md-4 col-2" id="profile-img">
           <button type="button" class="btn btn-outline-secondary d-none d-md-inline-block border-0">
             <span>Nix Student</span>
-            <img src="./avatar.jpg" class="rounded-circle">
+            <img src="../images/avatar.jpg" class="rounded-circle">
           </button>
-          <img src="./avatar.jpg" class="rounded-circle d-md-none">
+          <img src="../images/avatar.jpg" class="rounded-circle d-md-none">
         </div>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav d-md-none">
             <li class="nav-item active">
-              <a class="nav-link text-center" href="#1">Goals</a>
+              <a class="nav-link text-center" href="#">Goals</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-center" href="#2">Profile</a>
+              <a class="nav-link text-center" href="./profile.html">Profile</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-center" href="#3">Register</a>
+              <a class="nav-link text-center" href="./register.html">Register</a>
             </li>
           </ul>
         </div>
       </nav>
-
       <main class="container-fluid bg-light">
         <div class="row">
-          <h1 class="display-4 col-2 ml-5 text-dark" id="goals">Goals</h1>
-          <button type="button" class="btn d-none d-lg-block h-50 ml-auto mr-5 align-self-center text-bold btn-primary">
+          <h1 class="display-4 col-2 ml-md-5 ml-2 text-dark" id="top">Goals</h1>
+          <button title="Test" data-toggle="popover" type="button"
+            class="btn d-none d-lg-block h-50 ml-auto mr-5 align-self-center text-bold btn-primary">
             <i class="bi bi-download" style="opacity: .8;"></i> Generate Report</button>
         </div>
         <div class="row mb-3">
@@ -94,7 +94,7 @@
           <div class="goal rounded bg-light py-5 px-5 my-3 mx-3 mx-auto my-md-4 shadow-lg col-md-5 col-11">
             <h6 class="text-success">Earnings (annual)</h6>
             <h3>$215,000</h3>
-            <i class="bi bi-currency-dollar"></i>
+            <i data-toggle="popover" title="Requsets" class="bi bi-currency-dollar"></i>
           </div>
           <div class="goal rounded bg-light py-5 px-5 my-3 mx-3 mx-auto my-md-4 shadow-lg col-md-5 col-11">
             <h6 class="text-info">Tasks</h6>
@@ -111,12 +111,12 @@
             <i class="bi bi-envelope"></i>
           </div>
         </div>
-        <form class="row mx-5 bg-light mb-5 rounded shadow-lg">
+        <form class="row mx-5 bg-light mb-5 rounded-lg shadow-lg">
           <div class="col-12 bg-light border-bottom p-3 text-primary">
             <h4>Todo List</h4>
           </div>
           <div class="col-12 bg-light border-bottom p-3">
-            <h4>Lunch meeting</h4>
+            <h4>Breakfast meeting</h4>
             <p>10:30 AM</p>
             <input type="checkbox" class="border rounded shadow-sm" name="todo-list">
           </div>
@@ -126,16 +126,16 @@
             <input type="checkbox" class="border rounded shadow-sm" name="todo-list">
           </div>
           <div class="col-12 bg-light p-3">
-            <h4>Lunch meeting</h4>
+            <h4>Dinner meeting</h4>
             <p>12:30 AM</p>
             <input type="checkbox" class="border rounded shadow-sm" name="todo-list">
           </div>
         </form>
         <footer class="container p-5 text-center text-secondary">
-          Copyright &copy; Nix Student 2022
+          <span data-toggle="popover" title="Requsets">Copyright &copy; Nix Student 2022</span>
         </footer>
       </main>
-      <a class="rounded" href="#goals" id="goUp"><i class="bi bi-arrow-up-short"></i></a>
+      <a class="rounded" href="#top" id="goUp"><i class="bi bi-arrow-up-short"></i></a>
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"

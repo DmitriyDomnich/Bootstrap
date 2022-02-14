@@ -1,6 +1,48 @@
 @import '../shared/variables', '../shared/shared';
 
-h1 {
-  color: $primary;
-}
+main {
+  button {
+    font-size: 1.25em !important;
+    font-weight: 700 !important;
+  }
+  .goal {
+    i {
+      position: absolute;
+      font-size: 3em;
+      opacity: .15;
+      right: 4%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    h6 {
+      text-transform: uppercase;
+    }
+  }
+  p {
+    color: $secondary;
+    margin-bottom: 0;
+    &+input {
+      -webkit-appearance: none;
+      position: absolute;
+      right: 5%;
+      top: 50%;
+      transform: translateY(-50%);
+      
+      width:30px;
+      height:30px;
 
+      background:#fff;
+      &:checked {
+        background-color: $primary;
+
+        &::before {
+          content: "✓";
+          color: #fff;
+          
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
