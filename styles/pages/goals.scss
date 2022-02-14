@@ -1,5 +1,12 @@
 @import '../shared/variables', '../shared/shared';
-
+.my-popover::before {
+  content: '▲';
+  color: $secondary;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -1.15em; 
+}
 main {
   button {
     font-size: 1.25em !important;

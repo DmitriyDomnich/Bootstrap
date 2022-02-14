@@ -22,7 +22,8 @@ function onPopoverMouseover(ev) {
   
 
   const popover = document.createElement('div');
-  popover.classList.add('px-4', 'py-3', 'border', 'bg-light', 'rounded', 'shadow', 'position-absolute');
+  popover.classList.add('px-4', 'py-3', 'border', 'bg-light',
+   'rounded', 'shadow', 'position-absolute', 'my-popover');
   popover.innerText = el.title;
   popover.style.top = coords.bottom + window.scrollY + 5 + 'px';
   document.body.append(popover);

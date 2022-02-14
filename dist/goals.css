@@ -165,6 +165,16 @@ aside .list-group a.list-group-item.current {
   }
 }
 
+.my-popover::before {
+  content: '▲';
+  color: #6c757d;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: -1.15em;
+}
+
 main button {
   font-size: 1.25em !important;
   font-weight: 700 !important;
