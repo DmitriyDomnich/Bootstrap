@@ -1,30 +1,14 @@
-const searchInputEl = document.getElementById('search-input');
-
-let searchCollapsed = true;
+import { onWindowResize } from "./shared/search-bar.js";
 
 window.onresize = ev => {
-  if (window.innerWidth > 768) {
-    showSearchBar(true);
-  } else {
-    showSearchBar();
-  }
-  searchCollapsed = true;
+  onWindowResize(ev);
+
   document.querySelectorAll('.my-popover').forEach(el => el.remove());
   document.querySelectorAll('[data-toggle="popover"]')
     .forEach(el => el.addEventListener('mouseenter', onPopoverMouseover));
 };
 
-document.getElementById('search-button').onclick = clickEvent => {
-  if (window.innerWidth >= 768) return;
 
-  if (searchCollapsed) {
-    showSearchBar(true);
-    searchInputEl.focus();
-  } else {
-    showSearchBar();
-  }
-  searchCollapsed = !searchCollapsed;
-};
 
 document.querySelectorAll('[data-toggle="popover"]')
   .forEach(el => el.addEventListener('mouseenter', onPopoverMouseover));
@@ -74,21 +58,4 @@ function getClosePopoverButton() {
   `;
 
   return closeBtn;
-}
-
-function showSearchBar(show = false) {
-  if (show) {
-    searchInputEl.style.cssText = `
-      width: 1%;
-      height: calc(1.5em + .75rem + 2px);
-      padding: .375rem .75rem;
-    `;
-  } else {
-    searchInputEl.style.cssText = `
-      padding: 0;
-      width: 0;
-      height: 0;
-      border: 0;
-    `;
-  }
 }

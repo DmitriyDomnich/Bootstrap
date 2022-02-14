@@ -172,6 +172,11 @@ main {
   overflow-x: hidden;
 }
 
+main .top {
+  position: absolute;
+  top: 0;
+}
+
 main .homework {
   display: -webkit-box;
   display: -ms-flexbox;
