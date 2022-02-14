@@ -5,6 +5,10 @@ html {
   scroll-behavior: smooth;
 }
 
+a:not([href]) {
+  cursor: pointer;
+}
+
 a#goUp {
   position: fixed;
   right: 5vw;

@@ -6,6 +6,10 @@ html {
   scroll-behavior: smooth;
 }
 
+a:not([href]) {
+  cursor: pointer;
+}
+
 a#goUp {
   position: fixed;
   right: 5vw;
@@ -173,6 +177,7 @@ aside .list-group a.list-group-item.current {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   top: -1.15em;
+  z-index: 1;
 }
 
 main button {

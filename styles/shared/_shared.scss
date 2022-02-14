@@ -10,6 +10,9 @@
 html {
   scroll-behavior: smooth;
 }
+a:not([href]) {
+  cursor: pointer;
+}
 a#goUp {
   position: fixed;
   right: 5vw;
@@ -38,7 +41,7 @@ nav {
   right: 0;
   top: 0;
   z-index: 1;
-  
+
 
   i,.badge,img {
     cursor: pointer;
