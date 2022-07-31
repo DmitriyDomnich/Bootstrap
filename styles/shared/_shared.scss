@@ -8,7 +8,33 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  --text: #343a40 !important;
+  --background: #f8f9fa !important;
+  --secondary: #9bb2c6 !important;
+  --progress: #d6ecff !important;
+  --primary: #007bff !important;
+}
+.dark {
+  --text: #f8f9fa !important;
+  --background: #343a40 !important;
+  --secondary: #23272b !important;
+  --progress: #2d324a !important;
+  --primary: #151b20 !important;
+}
+.text {
+  color: var(--text);
+}
+.background {
+  background-color: var(--background);
+}
+.secondary {
+  background-color: var(--secondary);
+}
+.progress {
+  background-color: var(--progress);
+}
+.primary {
+  background-color: var(--primary);
 }
 a:not([href]) {
   cursor: pointer;
@@ -85,8 +111,8 @@ nav {
 
 main {
   position: relative;
-  top: 6rem;
-  margin-left: 16.7% !important;
+  top: 4.5rem;
+  margin-left: 16.5% !important;
 }
 
 
@@ -139,6 +165,9 @@ aside {
 }
 
 @media (max-width: 767px) {
+  main {
+    top: 3.75rem;
+  }
   #profile-img::before {
     display: none !important;
   }

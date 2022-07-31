@@ -13,6 +13,11 @@ main {
     font-size: 1.25em !important;
     font-weight: 700 !important;
   }
+  .square {
+    height: 200px;
+    width: 200px;
+    cursor: pointer;
+  }
   .goal {
     i {
       position: absolute;

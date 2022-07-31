@@ -1,7 +1,8 @@
 @import '../shared/variables', '../shared/shared';
-
-main {
+body {
   overflow-x: hidden;
+}
+main {
   .top {
     position: absolute;
     top: 0;

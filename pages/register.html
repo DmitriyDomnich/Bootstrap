@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../dist/register.css">
+  <script src="../scripts/register.index.js" type="module"></script>
   <title>Register</title>
 </head>
 
@@ -15,7 +16,7 @@
       <div class="col-md-4 d-none d-md-block rounded-left" id="img"></div>
       <div class="col-md-8 p-5 bg-light col-11 mx-auto" id="content">
         <h3 class="text-center text-secondary">Create an Account!</h3>
-        <form class="container mt-5" autocomplete="off">
+        <form class="container mt-5" novalidate autocomplete="off">
           <div class="row">
             <div class="col-12 mb-4 mx-auto col-md-6">
               <input class="border p-3 rounded-pill form-control" name="first-name" type="text"
@@ -28,7 +29,7 @@
               <input class="border p-3 rounded-pill form-control" name="email" type="email" placeholder="Email Address">
             </div>
             <div class="col-12 mb-4 mx-auto col-md-6">
-              <input class="border p-3 rounded-pill form-control" name="password" type="password"
+              <input minlength="2" class="border p-3 rounded-pill form-control" name="password" type="password"
                 placeholder="Password">
             </div>
             <div class="col-12 mb-4 mx-auto col-md-6">
